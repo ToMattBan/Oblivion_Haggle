@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Oblivion Haggle</title>
+</head>
+<body>
+<div>Disposi&ccedil;&atilde;o<input id="disposition" type="number" /></div>
+<div>Player Level Merchant<input id="playerSkill" type="number" /></div>
+<div>Player Luck<input id="playerLuck" type="number" /></div>
+<div>NPC Level Merchant<input id="merchantSkill" type="number" /></div>
+<div>NPV Luck<input id="merchantLuck" type="number" /></div>
+<p><button id="calc"> Calcular </button></p>
+<div id="result">&nbsp;</div>
+
+<script>
+document.querySelector('#calc').addEventListener('click', function() {
+	var disposition = document.querySelector('#disposition').value;
+	var playerSkill = document.querySelector('#playerSkill').value;
+	var playerLuck = document.querySelector('#playerLuck').value;
+	var merchantSkill = document.querySelector('#merchantSkill').value;
+	var merchantLuck = document.querySelector('#merchantLuck').value;
+
+	var best = Math.floor( ( 0.5 * Math.floor( 0.4 * ( disposition - 10 ) /4 ) + ( 100 + Math.min( playerSkill + 0.4 * ( playerLuck - 50 ),100 ) -Math.min( merchantSkill + 0.4 * ( merchantLuck - 50 ),100 ) ) /10 ) /0.55);
+
+	document.querySelector('#result').innerText = best;
+});
+</script>
+</body>
