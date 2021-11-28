@@ -14,15 +14,18 @@
 
 <script>
 document.querySelector('#calc').addEventListener('click', function() {
-	var disposition = document.querySelector('#disposition').value;
-	var playerSkill = document.querySelector('#playerSkill').value;
-	var playerLuck = document.querySelector('#playerLuck').value;
-	var merchantSkill = document.querySelector('#merchantSkill').value;
-	var merchantLuck = document.querySelector('#merchantLuck').value;
+var disposition = parseInt(document.querySelector('#disposition').value);
+var playerSkill = parseInt(document.querySelector('#playerSkill').value);
+var playerLuck = parseInt(document.querySelector('#playerLuck').value);
+var merchantSkill = parseInt(document.querySelector('#merchantSkill').value);
+var merchantLuck = parseInt(document.querySelector('#merchantLuck').value);
 
-	var best = Math.floor( ( 0.5 * Math.floor( 0.4 * ( disposition - 10 ) /4 ) + ( 100 + Math.min( playerSkill + 0.4 * ( playerLuck - 50 ),100 ) -Math.min( merchantSkill + 0.4 * ( merchantLuck - 50 ),100 ) ) /10 ) /0.55);
+var best = Math.floor( ( 0.5 * Math.floor( 0.4 * ( disposition - 10 ) /4 ) + ( 100 + Math.min( playerSkill + 0.4 * ( playerLuck - 50 ),100 ) -Math.min( merchantSkill + 0.4 * ( merchantLuck - 50 ),100 ) ) /10 ) /0.55)
 
-	document.querySelector('#result').innerText = best;
+best = best + 39;
+best = best + '%';
+
+document.querySelector('#result').innerText = best;
 });
 </script>
 </body>
