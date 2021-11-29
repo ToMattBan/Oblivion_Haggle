@@ -1,31 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Oblivion Haggle</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oblivion Haggle</title>
 </head>
+
 <body>
-<div>Disposi&ccedil;&atilde;o<input id="disposition" type="number" /></div>
-<div>Player Level Merchant<input id="playerSkill" type="number" /></div>
-<div>Player Luck<input id="playerLuck" type="number" /></div>
-<div>NPC Level Merchant<input id="merchantSkill" type="number" /></div>
-<div>NPC Luck<input id="merchantLuck" type="number" /></div>
-<p><button id="calc"> Calcular </button></p>
-<div id="result">&nbsp;</div>
+    <div>Disposição<input id="disposition" type="number" /></div>
+    <div>Player Level Merchant<input id="playerSkill" type="number" /></div>
+    <div>Player Luck<input id="playerLuck" type="number" /></div>
+    <div>NPC Level Merchant<input id="merchantSkill" type="number" /></div>
+    <div>NPC Luck<input id="merchantLuck" type="number" /></div>
+    <p><button id="calc"> Calcular </button></p>
+    <div id="result"></div>
 
-<script>
-document.querySelector('#calc').addEventListener('click', function() {
-var disposition = parseInt(document.querySelector('#disposition').value);
-var playerSkill = parseInt(document.querySelector('#playerSkill').value);
-var playerLuck = parseInt(document.querySelector('#playerLuck').value);
-var merchantSkill = parseInt(document.querySelector('#merchantSkill').value);
-var merchantLuck = parseInt(document.querySelector('#merchantLuck').value);
+    <script>
+        document.querySelector('#calc').addEventListener('click', function () {
+            var disposition = parseInt(document.querySelector('#disposition').value);
+            var playerSkill = parseInt(document.querySelector('#playerSkill').value);
+            var playerLuck = parseInt(document.querySelector('#playerLuck').value);
+            var merchantSkill = parseInt(document.querySelector('#merchantSkill').value);
+            var merchantLuck = parseInt(document.querySelector('#merchantLuck').value);
 
-var best = Math.floor( ( 0.5 * Math.floor( 0.4 * ( disposition - 10 ) /4 ) + ( 100 + Math.min( playerSkill + 0.4 * ( playerLuck - 50 ),100 ) -Math.min( merchantSkill + 0.4 * ( merchantLuck - 50 ),100 ) ) /10 ) /0.55)
+            var best = Math.floor((0.5 * Math.floor(0.4 * (disposition - 10) / 4) + (100 + Math.min(playerSkill + 0.4 * (playerLuck - 50), 100) - Math.min(merchantSkill + 0.4 * (merchantLuck - 50), 100)) / 10) / 0.55)
 
-best = best + 39;
-best = best + '%';
+            best = best + 39;
+            best = best + '%';
 
-document.querySelector('#result').innerText = best;
-});
-</script>
+            document.querySelector('#result').innerText = best;
+        });
+    </script>
+
 </body>
+
+</html>
