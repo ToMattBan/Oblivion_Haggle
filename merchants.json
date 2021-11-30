@@ -3,5 +3,10 @@
     "name": "Eilonwy",
     "merchantLevel": 40,
     "merchantLuck": 55,
-  }
+  },
+  {
+    "name": "Tertia Viducia",
+    "merchantLevel": 60,
+    "merchantLuck": 50,
+  },
 ]
