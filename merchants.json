@@ -24,4 +24,9 @@
     "merchantLevel": 6,
     "merchantLuck": 50,
   },
+  {
+    "name": "Calindil",
+    "merchantLevel": 60,
+    "merchantLuck": 50,
+  },
 ]
