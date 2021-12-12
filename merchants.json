@@ -29,4 +29,9 @@
     "merchantLevel": 60,
     "merchantLuck": 50,
   },
+  {
+    "name": "Ongar the World-Weary",
+    "merchantLevel": 60,
+    "merchantLuck": 60,
+  }
 ]
