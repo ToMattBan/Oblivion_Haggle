@@ -5,20 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="styles\myit.css">
+    <link rel="stylesheet" type="text/css" href="styles\style.css">
+
     <title>Oblivion Haggle</title>
 </head>
 
 <body>
-    <div>Disposição<input id="disposition" type="number" /></div>
-    <div>Player Level Merchant<input id="playerSkill" type="number" /></div>
-    <div>Player Luck<input id="playerLuck" type="number" /></div>
-    <div>NPC Level Merchant<input id="merchantSkill" type="number" /></div>
-    <div>NPC Luck<input id="merchantLuck" type="number" /></div>
-    <p><button id="calc"> Calcular </button></p>
+    <div class="background _z0"></div>
+
+    <form id="haggle" class="_8/12 _6/12@tabletH _4/12@laptop _fz12 _fz16@tabletH _white _poa _z1 _pxs _bdrs6 _bdwhite _bd2 _fw7">
+        <div class='_df _fxww _mvxxs'>
+            <span class="_1/1 _6/12@tabletH _db _tar@tabletH _mrxxs@tabletH">Disposition</span>
+            <input class="_mlxxs@tabletH _bdrs6 _1/1 _4/12@tabletH" id="disposition" type="number" required />
+        </div>
+        <div class='_df _fxww _mvxxs'>
+            <span class="_1/1 _6/12@tabletH _db _tar@tabletH _mrxxs@tabletH">Player Level Merchant</span>
+            <input class="_mlxxs@tabletH _bdrs6 _1/1 _4/12@tabletH" id="playerSkill" type="number" required />
+        </div>
+        <div class='_df _fxww _mvxxs'>
+            <span class="_1/1 _6/12@tabletH _db _tar@tabletH _mrxxs@tabletH">Player Luck</span>
+            <input class="_mlxxs@tabletH _bdrs6 _1/1 _4/12@tabletH" id="playerLuck" type="number" required />
+        </div>
+        <div class='_df _fxww _mvxxs'>
+            <span class="_1/1 _6/12@tabletH _db _tar@tabletH _mrxxs@tabletH">NPC Level Merchant</span>
+            <input class="_mlxxs@tabletH _bdrs6 _1/1 _4/12@tabletH" id="merchantSkill" type="number" required />
+        </div>
+        <div class='_df _fxww _mvxxs'>
+            <span class="_1/1 _6/12@tabletH _db _tar@tabletH _mrxxs@tabletH">NPC Luck</span>
+            <input class="_mlxxs@tabletH _bdrs6 _1/1 _4/12@tabletH" id="merchantLuck" type="number" required />
+        </div>
+
+        <p class="_tac _pt _m0">
+            <button class="_1/1 _6/12@tabletH _pxxs _t" id="calc" type="submit">Calculate</button>
+        </p>
+    </form>
+
     <div id="result"></div>
 
     <script>
-        document.querySelector('#calc').addEventListener('click', function () {
+        document.querySelector('#haggle').addEventListener('submit', function (e) {
+            e.preventDefault()
+
             var disposition = parseInt(document.querySelector('#disposition').value);
             var playerSkill = parseInt(document.querySelector('#playerSkill').value);
             var playerLuck = parseInt(document.querySelector('#playerLuck').value);

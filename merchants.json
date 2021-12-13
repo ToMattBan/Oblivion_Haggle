@@ -2,36 +2,36 @@
   {
     "name": "Eilonwy",
     "merchantLevel": 40,
-    "merchantLuck": 55,
+    "merchantLuck": 55
   },
   {
     "name": "Tertia Viducia",
     "merchantLevel": 60,
-    "merchantLuck": 50,
+    "merchantLuck": 50
   },
   {
     "name": "Borba gra-Uzgash",
     "merchantLevel": 60,
-    "merchantLuck": 50,
+    "merchantLuck": 50
   },
   {
     "name": "Sergius Verus",
     "merchantLevel": 60,
-    "merchantLuck": 50,
+    "merchantLuck": 50
   },
   {
     "name": "Aurelinwae",
     "merchantLevel": 6,
-    "merchantLuck": 50,
+    "merchantLuck": 50
   },
   {
     "name": "Calindil",
     "merchantLevel": 60,
-    "merchantLuck": 50,
+    "merchantLuck": 50
   },
   {
     "name": "Ongar the World-Weary",
     "merchantLevel": 60,
-    "merchantLuck": 60,
+    "merchantLuck": 60
   }
 ]
